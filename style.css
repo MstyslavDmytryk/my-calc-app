@@ -1,0 +1,65 @@
+body {
+    background-image: linear-gradient(to right, rgb(73, 118, 243) , rgb(85, 255, 247));
+    box-sizing: border-box;
+    padding: 30px;
+
+}
+
+button {
+    
+    height: 80px;
+    font-size: 1.8rem;
+    background-color: rgb(246, 247, 255);
+    border: none;
+    border-radius: 3px;
+}
+
+.current-number {
+    font-size: 2.5rem;
+}
+
+.prev-number {
+    font-size: 1.7rem;
+    color:rgb(231, 231, 231)
+}
+
+.span-two {
+    grid-column: span 2
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(59, 63, 87);
+    border-radius: 5px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 2rem;
+    color: aliceblue;
+    justify-content: space-around;
+}
+
+.equals {
+    background-color: rgb(118, 177, 255);
+}
+
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    gap: 5px;
+    justify-content: center;
+    align-items:baseline;    
+    
+}
+
+button:hover {
+    background-color:rgb(142, 255, 217);
+}
+
+.equals:hover {
+    background-color: rgb(146, 193, 255);
+}
