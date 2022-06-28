@@ -6,8 +6,8 @@ class Calculator {
   }
 
   clear() {
-    this.previousOperand = " ";
-    this.currentOperand = " ";
+    this.previousOperand = "";
+    this.currentOperand = "";
     this.operation = undefined;
   }
 
