@@ -12,7 +12,7 @@ class Calculator {
   }
 
   delete() {
-    this.currentOperand = this.currentOperand.slice(0, -1);
+    this.currentOperand = this.currentOperand.toString().slice(0, -1);
   }
 
   chooseOperation(operation) {
@@ -55,9 +55,17 @@ class Calculator {
     this.operation = undefined;
   }
 
+  changePlusMinus() {
+    if (this.currentOperand === 0) return;
+    else if (this.currentOperand > 0) {
+      this.currentOperand = -Math.abs(this.currentOperand);
+    } else {
+      this.currentOperand = Math.abs(this.currentOperand);
+    }
+  }
+
   updateDisplay() {
     this.currentTextOperand.innerText = this.currentOperand;
-
     this.previousTextOperand.innerText = this.previousOperand;
   }
 }
@@ -99,5 +107,10 @@ deleteButton.addEventListener("click", () => {
 
 equalsButton.addEventListener("click", () => {
   calculator.compute();
+  calculator.updateDisplay();
+});
+
+plusMinusButton.addEventListener("click", () => {
+  calculator.changePlusMinus();
   calculator.updateDisplay();
 });
